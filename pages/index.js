@@ -1,193 +1,102 @@
 import Head from 'next/head';
 
-function Home() {
-  const colors = {
-    primary: "#00125c",   // Dark blue
-    secondary: "#9aca3c", // Lime green
-    white: "#ffffff",
-    lightGray: "#f0f0f0",
-    offWhite: "#f9f9f9"
-  };
-
+export default function Home() {
   return (
-    <div style={styles.container}>
+    <>
       <Head>
         <title>EU-Africa Business Forum Facility</title>
         <meta name="description" content="EU-Africa Business Forum Facility page" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
 
       {/* Header */}
-      <header style={{ ...styles.header, backgroundColor: colors.primary }}>
-        <h1 style={{ color: colors.white }}>EU-Africa Business Forum Facility</h1>
+      <header>
+        <h1>EU-Africa Business Forum Facility</h1>
       </header>
 
       {/* Hero / About Section */}
-      <section style={styles.heroSection}>
-        <div style={styles.heroContent}>
-          <h2 style={{ color: colors.primary }}>What is the EU-Africa Business Forum?</h2>
+      <section className="hero-section">
+        <div className="hero-content">
+          <h2>What is the EU-Africa Business Forum?</h2>
           <p>
-            The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue, bringing together political and business
-            leaders from the European Union (EU) and Africa. Its aim is to increase investment and trade opportunities, fostering sustainable
-            economic partnerships between the two continents.
+            The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue,
+            bringing together political and business leaders from the European Union (EU) and Africa.
+            Its aim is to increase investment and trade opportunities, fostering sustainable economic partnerships
+            between the two continents.
           </p>
           <img
             src="https://via.placeholder.com/800x400"
             alt="EU-Africa Business Forum"
-            style={styles.responsiveImage}
+            className="responsive-image"
           />
         </div>
       </section>
 
-      {/* Timeline & History */}
-      <section style={styles.timelineSection}>
-        <h2 style={{ color: colors.primary, textAlign: "center" }}>Timeline & History</h2>
-        <div style={styles.timelineGrid}>
-          <div style={styles.timelineCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="2006 Brussels"
-              style={styles.timelineImage}
-            />
-            <div>
-              <h3>2006</h3>
-              <p>Brussels</p>
-            </div>
-          </div>
-          <div style={styles.timelineCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="2007 Accra"
-              style={styles.timelineImage}
-            />
-            <div>
-              <h3>2007</h3>
-              <p>Accra</p>
-            </div>
-          </div>
-          <div style={styles.timelineCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="2009 Nairobi"
-              style={styles.timelineImage}
-            />
-            <div>
-              <h3>2009</h3>
-              <p>Nairobi</p>
-            </div>
-          </div>
-          <div style={styles.timelineCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="2010 Tripoli"
-              style={styles.timelineImage}
-            />
-            <div>
-              <h3>2010</h3>
-              <p>Tripoli</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Gateway Priority Sectors */}
-      <section style={styles.sectorsSection}>
-        <h2 style={{ color: colors.primary, textAlign: "center" }}>Global Gateway Priority Sectors</h2>
-        <div style={styles.sectorsGrid}>
-          <div style={styles.sectorCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Digital Sector"
-              style={styles.sectorImage}
-            />
+      {/* Sectors Section */}
+      <section className="sectors-section">
+        <h2>Global Gateway Priority Sectors</h2>
+        <div className="sectors-grid">
+          <div className="sector-card">
+            <img src="https://via.placeholder.com/50" alt="Digital Logo" className="logo" />
             <h3>Digital Sector</h3>
+            <p>Focuses on IT, innovation, and connectivity to drive modern business solutions.</p>
           </div>
-          <div style={styles.sectorCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Climate & Energy"
-              style={styles.sectorImage}
-            />
+          <div className="sector-card">
+            <img src="https://via.placeholder.com/50" alt="Climate & Energy Logo" className="logo" />
             <h3>Climate & Energy</h3>
+            <p>Encourages sustainable practices and renewable energy solutions for a greener future.</p>
           </div>
-          <div style={styles.sectorCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Transport"
-              style={styles.sectorImage}
-            />
+          <div className="sector-card">
+            <img src="https://via.placeholder.com/50" alt="Transport Logo" className="logo" />
             <h3>Transport</h3>
+            <p>Improves mobility and logistics through innovative transport solutions.</p>
           </div>
-          <div style={styles.sectorCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Health"
-              style={styles.sectorImage}
-            />
+          <div className="sector-card">
+            <img src="https://via.placeholder.com/50" alt="Health Logo" className="logo" />
             <h3>Health</h3>
+            <p>Enhances healthcare services and drives innovation in medical technologies.</p>
           </div>
-          <div style={styles.sectorCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Education & Research"
-              style={styles.sectorImage}
-            />
+          <div className="sector-card">
+            <img src="https://via.placeholder.com/50" alt="Education & Research Logo" className="logo" />
             <h3>Education & Research</h3>
+            <p>Fosters knowledge sharing, academic partnerships, and innovative research.</p>
           </div>
         </div>
       </section>
 
-      {/* EABF Facility Overview */}
-      <section style={styles.facilitySection}>
-        <h2 style={{ color: colors.primary }}>EABF Facility Overview</h2>
+      {/* Facility Overview Section */}
+      <section className="facility-section">
+        <h2>EABF Facility Overview</h2>
         <p>
-          Established by the European Commission in 2024, the EABF Facility organizes the continental EU-Africa Business Forum every three years
-          and supports bilateral Business Forums with its African Partners. The facility is managed by a dedicated team and implements a 5-year
-          action programme focusing on:
+          Established by the European Commission in 2024, the EABF Facility organizes the continental EU-Africa
+          Business Forum every three years and supports bilateral Business Forums with its African Partners.
+          Managed by a dedicated team, it implements a 5-year action programme focusing on:
         </p>
         <ul>
-          <li>
-            <strong>Business Fora:</strong> Organizing events for enhanced G2G and B2G dialogue.
-          </li>
-          <li>
-            <strong>Networking:</strong> Facilitating B2B matchmaking and economic/business missions.
-          </li>
-          <li>
-            <strong>Capacity Building:</strong> Training, webinars, and workshops for EU and African Business Organisations.
-          </li>
-          <li>
-            <strong>Communication:</strong> Enhancing knowledge sharing through dialogues and collaborative initiatives.
-          </li>
+          <li><strong>Business Fora:</strong> Organizing events for enhanced G2G and B2G dialogue.</li>
+          <li><strong>Networking:</strong> Facilitating B2B matchmaking and economic/business missions.</li>
+          <li><strong>Capacity Building:</strong> Training, webinars, and workshops for EU and African Business Organisations.</li>
+          <li><strong>Communication:</strong> Enhancing knowledge sharing through dialogues and collaborative initiatives.</li>
         </ul>
       </section>
 
       {/* Our Team Section */}
-      <section style={styles.teamSection}>
-        <h2 style={{ color: colors.primary, textAlign: "center" }}>Our Team</h2>
-        <div style={styles.teamGrid}>
-          <div style={styles.teamCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Jane Doe"
-              style={styles.teamImage}
-            />
+      <section className="team-section">
+        <h2>Our Team</h2>
+        <div className="team-grid">
+          <div className="team-card">
+            <img src="https://via.placeholder.com/100" alt="Jane Doe" />
             <h3>Jane Doe</h3>
             <p>Project Manager</p>
           </div>
-          <div style={styles.teamCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="John Smith"
-              style={styles.teamImage}
-            />
+          <div className="team-card">
+            <img src="https://via.placeholder.com/100" alt="John Smith" />
             <h3>John Smith</h3>
             <p>Coordinator</p>
           </div>
-          <div style={styles.teamCard}>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Mary Johnson"
-              style={styles.teamImage}
-            />
+          <div className="team-card">
+            <img src="https://via.placeholder.com/100" alt="Mary Johnson" />
             <h3>Mary Johnson</h3>
             <p>Communications Lead</p>
           </div>
@@ -195,120 +104,154 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ ...styles.footer, backgroundColor: colors.primary }}>
-        <p style={{ color: colors.white }}>&copy; {new Date().getFullYear()} EU-Africa Business Forum Facility</p>
+      <footer>
+        <p>&copy; 2025 EU-Africa Business Forum Facility</p>
       </footer>
-    </div>
+
+      {/* Global Styles */}
+      <style jsx global>{`
+        /* Reset & Base Styles */
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          background-color: #fff;
+          color: #333;
+        }
+        /* Header */
+        header {
+          background-color: #00125c;
+          padding: 1.5rem;
+          text-align: center;
+        }
+        header h1 {
+          color: #ffffff;
+        }
+        /* Hero Section */
+        .hero-section {
+          background-color: #f0f0f0;
+          padding: 2rem 1rem;
+          text-align: center;
+        }
+        .hero-content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .responsive-image {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin-top: 1rem;
+        }
+        /* Sectors Section */
+        .sectors-section {
+          background-color: #f0f0f0;
+          padding: 2rem 1rem;
+        }
+        .sectors-section h2 {
+          color: #00125c;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        .sectors-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        .sector-card {
+          background-color: #ffffff;
+          border-radius: 8px;
+          padding: 1rem;
+          width: 200px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        .sector-card img.logo {
+          width: 50px;
+          height: 50px;
+          display: block;
+          margin: 0 auto 0.5rem;
+        }
+        .sector-card h3 {
+          margin-bottom: 0.5rem;
+          color: #00125c;
+        }
+        .sector-card p {
+          font-size: 0.9rem;
+          color: #555;
+        }
+        /* Facility Overview Section */
+        .facility-section {
+          background-color: #ffffff;
+          padding: 2rem 1rem;
+        }
+        .facility-section h2 {
+          color: #00125c;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        .facility-section ul {
+          list-style-type: disc;
+          margin-left: 1.5rem;
+        }
+        .facility-section li {
+          margin: 0.5rem 0;
+        }
+        /* Team Section */
+        .team-section {
+          background-color: #f9f9f9;
+          padding: 2rem 1rem;
+          text-align: center;
+        }
+        .team-section h2 {
+          color: #00125c;
+          margin-bottom: 1rem;
+        }
+        .team-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        .team-card {
+          background-color: #ffffff;
+          border-radius: 8px;
+          padding: 1rem;
+          width: 200px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        .team-card img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+        }
+        .team-card h3 {
+          color: #00125c;
+          margin-bottom: 0.25rem;
+        }
+        .team-card p {
+          font-size: 0.9rem;
+          color: #555;
+        }
+        /* Footer */
+        footer {
+          background-color: #00125c;
+          padding: 1.5rem;
+          text-align: center;
+        }
+        footer p {
+          color: #ffffff;
+        }
+      `}</style>
+    </>
   );
 }
-
-const styles = {
-  container: {
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    margin: 0,
-    padding: 0,
-    boxSizing: "border-box"
-  },
-  header: {
-    padding: "1.5rem",
-    textAlign: "center"
-  },
-  heroSection: {
-    backgroundColor: "#f0f0f0",
-    padding: "2rem 1rem",
-    textAlign: "center"
-  },
-  heroContent: {
-    maxWidth: "800px",
-    margin: "0 auto"
-  },
-  responsiveImage: {
-    width: "100%",
-    height: "auto",
-    borderRadius: "8px",
-    marginTop: "1rem"
-  },
-  timelineSection: {
-    padding: "2rem 1rem",
-    backgroundColor: "#ffffff"
-  },
-  timelineGrid: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    gap: "1rem",
-    marginTop: "1rem"
-  },
-  timelineCard: {
-    flex: "1 1 200px",
-    backgroundColor: "#f9f9f9",
-    borderRadius: "8px",
-    padding: "1rem",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-    textAlign: "center"
-  },
-  timelineImage: {
-    width: "100%",
-    height: "auto",
-    borderRadius: "4px"
-  },
-  sectorsSection: {
-    padding: "2rem 1rem",
-    backgroundColor: "#f0f0f0"
-  },
-  sectorsGrid: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    gap: "1rem",
-    marginTop: "1rem"
-  },
-  sectorCard: {
-    flex: "1 1 150px",
-    backgroundColor: "#ffffff",
-    borderRadius: "8px",
-    padding: "1rem",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-    textAlign: "center"
-  },
-  sectorImage: {
-    width: "100%",
-    height: "auto",
-    borderRadius: "4px"
-  },
-  facilitySection: {
-    padding: "2rem 1rem",
-    backgroundColor: "#ffffff"
-  },
-  teamSection: {
-    padding: "2rem 1rem",
-    backgroundColor: "#f9f9f9"
-  },
-  teamGrid: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    gap: "1rem",
-    marginTop: "1rem"
-  },
-  teamCard: {
-    flex: "1 1 200px",
-    backgroundColor: "#ffffff",
-    borderRadius: "8px",
-    padding: "1rem",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-    textAlign: "center"
-  },
-  teamImage: {
-    width: "100%",
-    height: "auto",
-    borderRadius: "50%",
-    marginBottom: "0.5rem"
-  },
-  footer: {
-    padding: "1.5rem",
-    textAlign: "center"
-  }
-};
-
-export default Home;
