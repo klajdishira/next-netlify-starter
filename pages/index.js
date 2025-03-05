@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 export default function Home() {
-  // Define color palette
   const colors = {
     primary: "#00125c",   // Dark blue
     secondary: "#9aca3c", // Lime green
@@ -231,4 +230,7 @@ const styles = {
   footer: {
     textAlign: 'center',
     marginTop: '2rem',
-    
+    padding: '1rem 0',
+    borderTop: '1px solid #ccc'
+  }
+};
