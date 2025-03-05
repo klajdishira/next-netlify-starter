@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Home() {
+function Home() {
   const colors = {
     primary: "#00125c",   // Dark blue
     secondary: "#9aca3c", // Lime green
