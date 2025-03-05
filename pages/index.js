@@ -7,7 +7,7 @@ export default function Home() {
         <title>EU-Africa Business Forum Facility</title>
         <meta name="description" content="EU-Africa Business Forum Facility page" />
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       {/* Header */}
@@ -15,22 +15,35 @@ export default function Home() {
         <h1>EU-Africa Business Forum Facility</h1>
       </header>
 
-      {/* Hero / About Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h2>What is the EU-Africa Business Forum?</h2>
-          <p>
-            The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue,
-            bringing together political and business leaders from the European Union (EU) and Africa.
-            Its aim is to increase investment and trade opportunities, fostering sustainable economic partnerships
-            between the two continents.
-          </p>
-          <img
-            src="https://via.placeholder.com/800x400"
-            alt="EU-Africa Business Forum"
-            className="responsive-image"
-          />
-        </div>
+      {/* About Section – centered on the screen */}
+      <section className="about-section">
+        <h2>What is the EU-Africa Business Forum?</h2>
+        <p>
+          The EU-Africa Business Forum (EABF) is further reinforced with the EABF Facility.
+          The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue, bringing together political and business leaders
+          from the European Union (EU) and Africa. Its aim is to increase investment and trade opportunities, fostering sustainable economic partnerships
+          between the two continents.
+        </p>
+        <p>
+          The forum facilitates business cooperation through business-to-business (B2B), business-to-government (B2G), and government-to-government (G2G)
+          interactions, and promotes high-level public-private dialogue on key topics aligned with policy themes—such as reinforcing and integrating EU-Africa
+          value chains in the spirit of the Comprehensive Strategy with Africa.
+        </p>
+        <p>
+          The continental Forum offers business representatives a unique opportunity to raise critical issues with policymakers from both Africa and the EU,
+          discuss policy reforms to improve the investment climate, and explore networking opportunities for the business community.
+        </p>
+        <blockquote>
+          “The private sector can and must play a key role in improving speed, scale, and impact of Global Gateway investments.
+          We need the private sector. That is why close cooperation with business is one very important pillar of Global Gateway.
+          We are mobilising the financial firepower of Europe’s leading companies to achieve this goal.”
+          <br />
+          — Ursula Von der Leyen, Global Gateway Forum, 2023
+        </blockquote>
+        <p>
+          First launched at the continental level in 2006, the EU-Africa Business Forum has grown into a landmark event held alongside the EU-Africa Summit,
+          with an increasing number of regional EU Business Forums further strengthening economic ties between Europe and Africa.
+        </p>
       </section>
 
       {/* Sectors Section */}
@@ -38,47 +51,31 @@ export default function Home() {
         <h2>Global Gateway Priority Sectors</h2>
         <div className="sectors-grid">
           <div className="sector-card">
-            <img src="https://via.placeholder.com/50" alt="Digital Logo" className="logo" />
+            <span className="icon" role="img" aria-label="Digital Sector">💻</span>
             <h3>Digital Sector</h3>
-            <p>Focuses on IT, innovation, and connectivity to drive modern business solutions.</p>
+            <p>IT, innovation, and connectivity driving modern business solutions.</p>
           </div>
           <div className="sector-card">
-            <img src="https://via.placeholder.com/50" alt="Climate & Energy Logo" className="logo" />
+            <span className="icon" role="img" aria-label="Climate & Energy">⚡</span>
             <h3>Climate & Energy</h3>
-            <p>Encourages sustainable practices and renewable energy solutions for a greener future.</p>
+            <p>Renewable energy and sustainable practices for a greener future.</p>
           </div>
           <div className="sector-card">
-            <img src="https://via.placeholder.com/50" alt="Transport Logo" className="logo" />
+            <span className="icon" role="img" aria-label="Transport">🚆</span>
             <h3>Transport</h3>
-            <p>Improves mobility and logistics through innovative transport solutions.</p>
+            <p>Innovative mobility and logistics solutions enhancing connectivity.</p>
           </div>
           <div className="sector-card">
-            <img src="https://via.placeholder.com/50" alt="Health Logo" className="logo" />
+            <span className="icon" role="img" aria-label="Health">🏥</span>
             <h3>Health</h3>
-            <p>Enhances healthcare services and drives innovation in medical technologies.</p>
+            <p>Advancing healthcare services and medical technology innovations.</p>
           </div>
           <div className="sector-card">
-            <img src="https://via.placeholder.com/50" alt="Education & Research Logo" className="logo" />
+            <span className="icon" role="img" aria-label="Education & Research">🎓</span>
             <h3>Education & Research</h3>
-            <p>Fosters knowledge sharing, academic partnerships, and innovative research.</p>
+            <p>Fostering academic partnerships and innovative research initiatives.</p>
           </div>
         </div>
-      </section>
-
-      {/* Facility Overview Section */}
-      <section className="facility-section">
-        <h2>EABF Facility Overview</h2>
-        <p>
-          Established by the European Commission in 2024, the EABF Facility organizes the continental EU-Africa
-          Business Forum every three years and supports bilateral Business Forums with its African Partners.
-          Managed by a dedicated team, it implements a 5-year action programme focusing on:
-        </p>
-        <ul>
-          <li><strong>Business Fora:</strong> Organizing events for enhanced G2G and B2G dialogue.</li>
-          <li><strong>Networking:</strong> Facilitating B2B matchmaking and economic/business missions.</li>
-          <li><strong>Capacity Building:</strong> Training, webinars, and workshops for EU and African Business Organisations.</li>
-          <li><strong>Communication:</strong> Enhancing knowledge sharing through dialogues and collaborative initiatives.</li>
-        </ul>
       </section>
 
       {/* Our Team Section */}
@@ -130,32 +127,49 @@ export default function Home() {
         }
         header h1 {
           color: #ffffff;
+          font-size: 2rem;
         }
-        /* Hero Section */
-        .hero-section {
+        /* About Section – centered */
+        .about-section {
           background-color: #f0f0f0;
-          padding: 2rem 1rem;
+          padding: 3rem 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           text-align: center;
+          min-height: 60vh;
         }
-        .hero-content {
+        .about-section h2 {
+          color: #00125c;
+          margin-bottom: 1rem;
+          font-size: 2rem;
+        }
+        .about-section p {
           max-width: 800px;
-          margin: 0 auto;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+          line-height: 1.5;
         }
-        .responsive-image {
-          width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin-top: 1rem;
+        .about-section blockquote {
+          font-style: italic;
+          color: #555;
+          margin: 1rem auto;
+          max-width: 700px;
+          padding: 1rem;
+          border-left: 4px solid #9aca3c;
+          background-color: #fff;
         }
         /* Sectors Section */
         .sectors-section {
           background-color: #f0f0f0;
           padding: 2rem 1rem;
+          text-align: center;
         }
         .sectors-section h2 {
           color: #00125c;
-          text-align: center;
           margin-bottom: 1rem;
+          font-size: 2rem;
         }
         .sectors-grid {
           display: flex;
@@ -172,36 +186,19 @@ export default function Home() {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           text-align: center;
         }
-        .sector-card img.logo {
-          width: 50px;
-          height: 50px;
+        .sector-card .icon {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
           display: block;
-          margin: 0 auto 0.5rem;
         }
         .sector-card h3 {
           margin-bottom: 0.5rem;
           color: #00125c;
+          font-size: 1.2rem;
         }
         .sector-card p {
           font-size: 0.9rem;
           color: #555;
-        }
-        /* Facility Overview Section */
-        .facility-section {
-          background-color: #ffffff;
-          padding: 2rem 1rem;
-        }
-        .facility-section h2 {
-          color: #00125c;
-          margin-bottom: 1rem;
-          text-align: center;
-        }
-        .facility-section ul {
-          list-style-type: disc;
-          margin-left: 1.5rem;
-        }
-        .facility-section li {
-          margin: 0.5rem 0;
         }
         /* Team Section */
         .team-section {
@@ -212,6 +209,7 @@ export default function Home() {
         .team-section h2 {
           color: #00125c;
           margin-bottom: 1rem;
+          font-size: 2rem;
         }
         .team-grid {
           display: flex;
@@ -237,6 +235,7 @@ export default function Home() {
         .team-card h3 {
           color: #00125c;
           margin-bottom: 0.25rem;
+          font-size: 1.2rem;
         }
         .team-card p {
           font-size: 0.9rem;
@@ -250,6 +249,7 @@ export default function Home() {
         }
         footer p {
           color: #ffffff;
+          font-size: 1rem;
         }
       `}</style>
     </>
