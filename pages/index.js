@@ -4,7 +4,9 @@ export default function Home() {
   const colors = {
     primary: "#00125c",   // Dark blue
     secondary: "#9aca3c", // Lime green
-    white: "#ffffff"
+    white: "#ffffff",
+    lightGray: "#f0f0f0",
+    offWhite: "#f9f9f9"
   };
 
   return (
@@ -14,177 +16,187 @@ export default function Home() {
         <meta name="description" content="EU-Africa Business Forum Facility page" />
       </Head>
 
-      <header style={{ ...styles.header, backgroundColor: colors.primary, color: colors.white }}>
-        <h1>
-          The EU-Africa Business Forum (EABF) is further reinforced with the EABF Facility
-        </h1>
+      {/* Header */}
+      <header style={{ ...styles.header, backgroundColor: colors.primary }}>
+        <h1 style={{ color: colors.white }}>EU-Africa Business Forum Facility</h1>
       </header>
 
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>What is the EU-Africa Business Forum?</h2>
-        <p>
-          The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue, bringing together
-          political and business leaders from the European Union (EU) and Africa. Its aim is to increase investment and
-          trade opportunities, fostering sustainable economic partnerships between the two continents. The forum
-          facilitates business cooperation through business-to-business (B2B), business-to-government (B2G), and
-          government-to-government (G2G) interactions, and promotes high level public-private dialogue on key topics
-          aligned with the policy themes, such as reinforcing and integrating EU-Africa value chains in the spirit of the
-          Comprehensive Strategy with Africa.
-        </p>
-        <p>
-          The continental Forum offers business representatives a unique opportunity to raise critical issues with
-          policymakers from both Africa and the EU, discuss policy reforms to improve the investment climate and explore
-          networking opportunities for the business community.
-        </p>
-        <blockquote style={{ ...styles.blockquote, borderLeft: `4px solid ${colors.secondary}` }}>
-          “The private sector can and must play a key role in improving speed, scale, and impact of Global Gateway
-          investments. We need the private sector. That is why close cooperation with business is one very important pillar
-          of Global Gateway. We are mobilising the financial firepower of Europe’s leading companies to achieve this
-          goal.”
-          <br />
-          <cite>— Ursula Von der Leyen, Global Gateway Forum, 2023</cite>
-        </blockquote>
+      {/* Hero / About Section */}
+      <section style={styles.heroSection}>
+        <div style={styles.heroContent}>
+          <h2 style={{ color: colors.primary }}>What is the EU-Africa Business Forum?</h2>
+          <p>
+            The high-level event “EU-Africa Business Forum (EABF)” offers a platform for dialogue, bringing together political and business
+            leaders from the European Union (EU) and Africa. Its aim is to increase investment and trade opportunities, fostering sustainable
+            economic partnerships between the two continents.
+          </p>
+          <img
+            src="https://via.placeholder.com/800x400"
+            alt="EU-Africa Business Forum"
+            style={styles.responsiveImage}
+          />
+        </div>
       </section>
 
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>EABF - A history of engaging the private sector for better cooperation</h2>
-        <p>
-          The EU-Africa Business Forum was first launched at the continental level in 2006 and has since become a landmark
-          event held alongside the EU-Africa Summit. Following this first event, there has been a growing number of EU
-          Business Forums (EUBFs) held across the continent, further strengthening economic ties between Europe and Africa.
-        </p>
+      {/* Timeline & History */}
+      <section style={styles.timelineSection}>
+        <h2 style={{ color: colors.primary, textAlign: "center" }}>Timeline & History</h2>
+        <div style={styles.timelineGrid}>
+          <div style={styles.timelineCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="2006 Brussels"
+              style={styles.timelineImage}
+            />
+            <div>
+              <h3>2006</h3>
+              <p>Brussels</p>
+            </div>
+          </div>
+          <div style={styles.timelineCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="2007 Accra"
+              style={styles.timelineImage}
+            />
+            <div>
+              <h3>2007</h3>
+              <p>Accra</p>
+            </div>
+          </div>
+          <div style={styles.timelineCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="2009 Nairobi"
+              style={styles.timelineImage}
+            />
+            <div>
+              <h3>2009</h3>
+              <p>Nairobi</p>
+            </div>
+          </div>
+          <div style={styles.timelineCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="2010 Tripoli"
+              style={styles.timelineImage}
+            />
+            <div>
+              <h3>2010</h3>
+              <p>Tripoli</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>The EU-Africa Business Forum powered by the EABF Facility</h2>
-        <table style={styles.table}>
-          <thead>
-            <tr>
-              <th style={styles.tableHeader}>Year</th>
-              <th style={styles.tableHeader}>Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={styles.tableCell}>2006</td>
-              <td style={styles.tableCell}>Brussels</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2007</td>
-              <td style={styles.tableCell}>Accra</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2009</td>
-              <td style={styles.tableCell}>Nairobi</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2010</td>
-              <td style={styles.tableCell}>Tripoli</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2014</td>
-              <td style={styles.tableCell}>Brussels</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2017</td>
-              <td style={styles.tableCell}>Abidjan</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2022</td>
-              <td style={styles.tableCell}>Brussels</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2025</td>
-              <td style={styles.tableCell}>Africa</td>
-            </tr>
-            <tr>
-              <td style={styles.tableCell}>2028</td>
-              <td style={styles.tableCell}>Brussels</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* Global Gateway Priority Sectors */}
+      <section style={styles.sectorsSection}>
+        <h2 style={{ color: colors.primary, textAlign: "center" }}>Global Gateway Priority Sectors</h2>
+        <div style={styles.sectorsGrid}>
+          <div style={styles.sectorCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Digital Sector"
+              style={styles.sectorImage}
+            />
+            <h3>Digital Sector</h3>
+          </div>
+          <div style={styles.sectorCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Climate & Energy"
+              style={styles.sectorImage}
+            />
+            <h3>Climate & Energy</h3>
+          </div>
+          <div style={styles.sectorCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Transport"
+              style={styles.sectorImage}
+            />
+            <h3>Transport</h3>
+          </div>
+          <div style={styles.sectorCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Health"
+              style={styles.sectorImage}
+            />
+            <h3>Health</h3>
+          </div>
+          <div style={styles.sectorCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Education & Research"
+              style={styles.sectorImage}
+            />
+            <h3>Education & Research</h3>
+          </div>
+        </div>
       </section>
 
-      <section style={styles.section}>
+      {/* EABF Facility Overview */}
+      <section style={styles.facilitySection}>
+        <h2 style={{ color: colors.primary }}>EABF Facility Overview</h2>
         <p>
-          The EABF Facility was established by the European Commission in 2024 to organise the continental EU-Africa Business
-          Forum every three years and support the bilateral Business Forums with its African Partners.
-        </p>
-        <p>
-          The EABF Facility is supported by a project management team, tasked with the coordination and implementation of a
-          5-year action programme. The Facility organizes activities and events cohesively, ensuring direction and fostering
-          interaction among all EABF stakeholders and participants, with strategic guidance provided by DG International
-          Partnerships (DG INTPA), alongside collaboration with the African Union and Business Support Organisations (BSOs).
-          The programme is built on the following activities:
+          Established by the European Commission in 2024, the EABF Facility organizes the continental EU-Africa Business Forum every three years
+          and supports bilateral Business Forums with its African Partners. The facility is managed by a dedicated team and implements a 5-year
+          action programme focusing on:
         </p>
         <ul>
           <li>
-            Supporting the organisation of Business Fora at continental and bilateral level for strengthened G2G and B2G dialogue,
-            and networking engagement with stakeholders
+            <strong>Business Fora:</strong> Organizing events for enhanced G2G and B2G dialogue.
           </li>
           <li>
-            Facilitating networking among enterprises through B2B, matchmaking, organisation of Economic/Business missions
+            <strong>Networking:</strong> Facilitating B2B matchmaking and economic/business missions.
           </li>
           <li>
-            Increasing capacity of EU and African Business Organisations and building stronger linkages between BSOs, through
-            training, webinars, and workshops
+            <strong>Capacity Building:</strong> Training, webinars, and workshops for EU and African Business Organisations.
           </li>
           <li>
-            Enhanced communication and knowledge sharing through dialogues and calls
+            <strong>Communication:</strong> Enhancing knowledge sharing through dialogues and collaborative initiatives.
           </li>
         </ul>
-        <p>
-          The Global Gateway is central to the EABF Facility, which aims to support and encourage private sector engagement around
-          its strategy, priority sectors, and the political priorities endorsed by the EU-AU Summit.
-        </p>
       </section>
 
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>Objectives of the EABF Facility</h2>
-        <p>
-          A primary objective of the Facility is to position the EABF related activities within the framework of key initiatives,
-          contributing to their success by engaging the private sector and involving EABF Facility stakeholders from Europe and
-          Africa. Focused on sustainable development, the EABF emphasizes investments that meet environmental, social, and
-          governance standards in the Global Gateway priority sectors. Ultimately, it serves as a platform that connects
-          policymakers, business leaders, and financial institutions to foster economic growth and job creation across both
-          continents.
-        </p>
+      {/* Our Team Section */}
+      <section style={styles.teamSection}>
+        <h2 style={{ color: colors.primary, textAlign: "center" }}>Our Team</h2>
+        <div style={styles.teamGrid}>
+          <div style={styles.teamCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Jane Doe"
+              style={styles.teamImage}
+            />
+            <h3>Jane Doe</h3>
+            <p>Project Manager</p>
+          </div>
+          <div style={styles.teamCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="John Smith"
+              style={styles.teamImage}
+            />
+            <h3>John Smith</h3>
+            <p>Coordinator</p>
+          </div>
+          <div style={styles.teamCard}>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Mary Johnson"
+              style={styles.teamImage}
+            />
+            <h3>Mary Johnson</h3>
+            <p>Communications Lead</p>
+          </div>
+        </div>
       </section>
 
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>Global Gateway Priority Sectors</h2>
-        <p>
-          Digital Sector, Climate and Energy, Transport, Health, Education and Research
-        </p>
-      </section>
-
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>Stakeholders of the EU-Africa Business Forum Facility</h2>
-        <p>
-          The Facility has a wide array of stakeholders with varied interests, needs, and competences. The Facility will stimulate
-          and leverage collaborative actions among stakeholders to improve business relations, facilitate investment, and enhance
-          economic ties between governments and business communities from both continents. Stakeholder engagement is therefore
-          at the core of the programme, shaping its actions and determining its outcomes. The key stakeholders for the EU-Africa
-          Business Forum Facility are the EU Delegations, private companies and BSOs from both Africa and the EU.
-        </p>
-      </section>
-
-      <section style={styles.section}>
-        <h2 style={{ color: colors.primary }}>What the EABF Facility Offers</h2>
-        <p>
-          The EABF Facility offers a range of services that include the organisation of high-level events, B2Bs and matchmaking,
-          facilitation of policy and political dialogues, and sharing of information and best practices. The Facility will then
-          enhance synergies and coordination among stakeholders through communication, visibility and knowledge, starting by the
-          EU Delegations, BSOs, and private companies.
-        </p>
-        <p>
-          In this sense, the Facility is putting in place the INTPAEABF Digital Platform that will facilitate knowledge sharing, host
-          capacity-building activities, and enhance networking opportunities. Concrete activities are:
-        </p>
-      </section>
-
-      <footer style={{ ...styles.footer, backgroundColor: colors.primary, color: colors.white }}>
-        <p>&copy; {new Date().getFullYear()} EU-Africa Business Forum Facility</p>
+      {/* Footer */}
+      <footer style={{ ...styles.footer, backgroundColor: colors.primary }}>
+        <p style={{ color: colors.white }}>&copy; {new Date().getFullYear()} EU-Africa Business Forum Facility</p>
       </footer>
     </div>
   );
@@ -192,45 +204,111 @@ export default function Home() {
 
 const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
-    padding: '2rem',
-    lineHeight: 1.6,
-    maxWidth: '800px',
-    margin: '0 auto'
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    margin: 0,
+    padding: 0,
+    boxSizing: "border-box"
   },
   header: {
-    textAlign: 'center',
-    marginBottom: '2rem',
-    padding: '1rem'
+    padding: "1.5rem",
+    textAlign: "center"
   },
-  section: {
-    marginBottom: '2rem'
+  heroSection: {
+    backgroundColor: "#f0f0f0",
+    padding: "2rem 1rem",
+    textAlign: "center"
   },
-  blockquote: {
-    paddingLeft: '1rem',
-    margin: '1rem 0',
-    fontStyle: 'italic'
+  heroContent: {
+    maxWidth: "800px",
+    margin: "0 auto"
   },
-  table: {
-    width: '100%',
-    borderCollapse: 'collapse',
-    marginBottom: '1rem'
+  responsiveImage: {
+    width: "100%",
+    height: "auto",
+    borderRadius: "8px",
+    marginTop: "1rem"
   },
-  tableHeader: {
-    border: '1px solid #ccc',
-    padding: '0.5rem',
-    backgroundColor: '#f0f0f0',
-    textAlign: 'left'
+  timelineSection: {
+    padding: "2rem 1rem",
+    backgroundColor: "#ffffff"
   },
-  tableCell: {
-    border: '1px solid #ccc',
-    padding: '0.5rem',
-    textAlign: 'left'
+  timelineGrid: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    gap: "1rem",
+    marginTop: "1rem"
+  },
+  timelineCard: {
+    flex: "1 1 200px",
+    backgroundColor: "#f9f9f9",
+    borderRadius: "8px",
+    padding: "1rem",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    textAlign: "center"
+  },
+  timelineImage: {
+    width: "100%",
+    height: "auto",
+    borderRadius: "4px"
+  },
+  sectorsSection: {
+    padding: "2rem 1rem",
+    backgroundColor: "#f0f0f0"
+  },
+  sectorsGrid: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    gap: "1rem",
+    marginTop: "1rem"
+  },
+  sectorCard: {
+    flex: "1 1 150px",
+    backgroundColor: "#ffffff",
+    borderRadius: "8px",
+    padding: "1rem",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    textAlign: "center"
+  },
+  sectorImage: {
+    width: "100%",
+    height: "auto",
+    borderRadius: "4px"
+  },
+  facilitySection: {
+    padding: "2rem 1rem",
+    backgroundColor: "#ffffff"
+  },
+  teamSection: {
+    padding: "2rem 1rem",
+    backgroundColor: "#f9f9f9"
+  },
+  teamGrid: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    gap: "1rem",
+    marginTop: "1rem"
+  },
+  teamCard: {
+    flex: "1 1 200px",
+    backgroundColor: "#ffffff",
+    borderRadius: "8px",
+    padding: "1rem",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    textAlign: "center"
+  },
+  teamImage: {
+    width: "100%",
+    height: "auto",
+    borderRadius: "50%",
+    marginBottom: "0.5rem"
   },
   footer: {
-    textAlign: 'center',
-    marginTop: '2rem',
-    padding: '1rem 0',
-    borderTop: '1px solid #ccc'
+    padding: "1.5rem",
+    textAlign: "center"
   }
 };
+
+export default Home;
